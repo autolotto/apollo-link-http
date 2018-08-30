@@ -131,7 +131,7 @@ export const createHttpLink = (linkOptions: HttpLink.Options = {}) => {
           // to pass to UI
           // this should only happen if we *also* have data as part of the response key per
           // the spec
-          if (err.result && err.result.errors && err.result.data) {
+          if (err.result && err.result.errors) {
             // if we dont' call next, the UI can only show networkError because AC didn't
             // get andy graphqlErrors
             // this is graphql execution result info (i.e errors and possibly data)
